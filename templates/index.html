@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<form action="/profile" method="post">
+    <br>
+    <input type="text" name="client_id" placeholder="Client_id">
+    <br>
+    <input type="text" name="tpin" placeholder="T PIN">
+    <br>
+    <input type="text" name="otp" placeholder="T OTP CODE">
+    <br>
+    <input type="text" name="apikey" placeholder="API key">
+    <br>
+    <input type="submit" value="Login" id="greet">
+</form>
+
+{% endblock %}
