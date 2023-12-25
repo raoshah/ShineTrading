@@ -3,4 +3,27 @@ Flask==3.0.0
 logzero==1.7.0
 pyotp==2.9.0
 smartapi-python==1.4.1
+ansimarkup==1.4.0
+asn1crypto==0.24.0
+better-exceptions-fork==0.2.1.post6
+certifi==2019.3.9
+cffi==1.12.3
+chardet==3.0.4
+Click==7.0
+colorama==0.4.1
+cryptography==2.7
+Flask==1.0.3
+idna==2.8
+itsdangerous==1.1.0
+Jinja2==2.10.1
+loguru==0.2.5
+MarkupSafe==1.1.1
+pycparser==2.19
+Pygments==2.4.2
+pyOpenSSL==19.0.0
+PySocks==1.7.0
+requests==2.22.0
+six==1.12.0
+urllib3==1.24.2
+Werkzeug==0.15.4
 

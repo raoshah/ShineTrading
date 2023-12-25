@@ -40,7 +40,7 @@ def five_min_candle(header, six_days_ago):
 
     for json_data in candle_data_list:
         data = json.loads(json_data)
-        specific_data = data['data'][1]  # Extracting the first set of data from each JSON
+        specific_data = data['data'][1]
         specific_data_list.append(specific_data)
 
     return specific_data_list
@@ -142,6 +142,7 @@ def profile():
                 return render_template('profile.html', name=order_placed, holdings=holdings)
         else:
             six_days_ago = datetime.now() - timedelta(days=6, hours=11)
+            six_days_ago = datetime.strptime(six_days_ago, "%Y-%m-%d %H:%M:%S")
             holdings = five_min_candle(user['headers'], six_days_ago)
             order_placed = algo_five(holdings)
             if order_placed:
