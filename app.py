@@ -34,8 +34,7 @@ def five_min_candle(header, six_days_ago):
         data = res.read().decode("utf-8")
         candle_data_list.append(data)
         time.sleep(0.2)
-
-    conn.close()
+        conn.close()
 
     specific_data_list = []
 
@@ -105,7 +104,7 @@ def login():
         data = res.read()
         response_json = json.loads(data.decode("utf-8"))
         jwt_token = response_json['data']['jwtToken']
-        print(jwt_token)
+        conn.close()
         headers = {
         'Authorization': 'Bearer '+jwt_token,
         'Content-Type': 'application/json',
@@ -176,6 +175,7 @@ def order():
     res = conn.getresponse()
     data = res.read()
     print(data.decode("utf-8"))
+    conn.close()
     return 'seccuss'
   return "Please login first"
 
